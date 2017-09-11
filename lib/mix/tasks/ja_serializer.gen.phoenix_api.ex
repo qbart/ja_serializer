@@ -54,10 +54,10 @@ if Code.ensure_loaded?(Phoenix) do
       ]
 
       unless File.exists?("web/views/changeset_view.ex") do
-        Mix.Phoenix.copy_from paths(), "priv/templates/phoenix.gen.json", "", binding, [{:eex, "changeset_view.ex", "web/views/changeset_view.ex"}]
+        Mix.Phoenix.copy_from paths(), "priv/templates/phoenix.gen.json", binding, [{:eex, "changeset_view.ex", "web/views/changeset_view.ex"}]
       end
 
-      Mix.Phoenix.copy_from paths(), "priv/templates/ja_serializer.gen.phoenix_api", "", binding, files
+      Mix.Phoenix.copy_from paths(), "priv/templates/ja_serializer.gen.phoenix_api", binding, files
 
       instructions = compile_instructions(route, binding, refs)
 
